@@ -3,7 +3,6 @@
   "datasetReference": {
     "byPath": {
       "path": "../deneb_power_bi_sample_workbook.SemanticModel"
-    },
-    "byConnection": null
+    }
   }
 }

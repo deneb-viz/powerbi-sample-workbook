@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY23SU11",
@@ -42,8 +42,7 @@
     ]
   },
   "publicCustomVisuals": [
-    "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
-    "iconMapV34089C0EB522B416294AA926F71B4FDBB"
+    "deneb7E15AEF80B9E4D4F8E12924291ECE89A"
   ],
   "resourcePackages": [
     {
@@ -54,17 +53,6 @@
           "name": "CY23SU11",
           "path": "BaseThemes/CY23SU11.json",
           "type": "BaseTheme"
-        }
-      ]
-    },
-    {
-      "name": "STANDALONEdeneb7E15AEF80B9E4D4F8E12924291ECE89A",
-      "type": "CustomVisual",
-      "items": [
-        {
-          "name": "STANDALONEdeneb7E15AEF80B9E4D4F8E12924291ECE89A.pbiviz.json",
-          "path": "STANDALONEdeneb7E15AEF80B9E4D4F8E12924291ECE89A.pbiviz.json",
-          "type": "CustomVisualMetadata"
         }
       ]
     },
@@ -146,17 +134,6 @@
           "name": "dataset_background8481175941521644.png",
           "path": "dataset_background8481175941521644.png",
           "type": "Image"
-        }
-      ]
-    },
-    {
-      "name": "BETAdeneb7E15AEF80B9E4D4F8E12924291ECE89A",
-      "type": "CustomVisual",
-      "items": [
-        {
-          "name": "BETAdeneb7E15AEF80B9E4D4F8E12924291ECE89A.pbiviz.json",
-          "path": "BETAdeneb7E15AEF80B9E4D4F8E12924291ECE89A.pbiviz.json",
-          "type": "CustomVisualMetadata"
         }
       ]
     }

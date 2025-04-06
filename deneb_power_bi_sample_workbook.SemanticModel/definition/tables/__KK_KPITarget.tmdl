@@ -6,11 +6,9 @@ table __KK_KPITarget
 		lineageTag: bb6f5bfa-f87d-499c-ac8f-7029e4f5ac93
 
 	column KPITarget
-		dataType: int64
 		formatString: 0
 		lineageTag: cd6be96c-4d2b-4292-8020-f21783c0f8c3
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =

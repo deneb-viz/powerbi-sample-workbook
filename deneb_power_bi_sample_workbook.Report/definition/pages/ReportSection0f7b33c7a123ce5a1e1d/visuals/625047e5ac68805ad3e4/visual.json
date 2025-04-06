@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "625047e5ac68805ad3e4",
   "position": {
     "x": 1184.9485015524765,
@@ -10,7 +10,7 @@
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "BETAdeneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
     "query": {
       "queryState": {
         "dataset": {
@@ -140,7 +140,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'5.19.0'"
+                  "Value": "'5.20.1'"
                 }
               }
             }
@@ -153,7 +153,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.7.0.20240624#c94536d'"
+                  "Value": "'1.7.2.1'"
                 }
               }
             }

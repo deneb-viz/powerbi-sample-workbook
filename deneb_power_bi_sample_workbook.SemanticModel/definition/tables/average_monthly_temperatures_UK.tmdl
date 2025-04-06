@@ -225,7 +225,7 @@ table average_monthly_temperatures_UK
 		queryGroup: powerbi_imported_datasets
 		source =
 				let
-				    Source = Json.Document(File.Contents("C:\Users\pbiqu\OneDrive\Documents\PowerBI\Deneb_Showcases\Deneb_Vega_Playground\Average_temperature_UK.json")),
+				    Source = Json.Document(Web.Contents("https://raw.githubusercontent.com/deneb-viz/powerbi-sample-workbook/refs/heads/main/supplementary-datasets/Average_temperature_UK.json")),
 				    table_to_records = Table.FromRecords( Source ),
 				    #"Changed Type" = Table.TransformColumnTypes(table_to_records,{{"Date", type date}, {"AverageTemperature", type number}, {"AverageTemperatureUncertainty", type number}, {"City", type text}, {"Country", type text}, {"Latitude", type text}, {"Longitude", type text}, {"Sample", Int64.Type}, {"City Key", Int64.Type}}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"AverageTemperature", "Average Temperature"}, {"AverageTemperatureUncertainty", "Average Temperature Uncertainty"}}),
@@ -234,5 +234,7 @@ table average_monthly_temperatures_UK
 				in
 				    Custom1
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
 

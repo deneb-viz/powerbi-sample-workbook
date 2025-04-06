@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "8d7f11459beb57958c9e",
   "position": {
     "x": 977.76466999277636,
@@ -63,7 +63,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.7.2.1'"
+                  "Value": "'1.8.0.0'"
                 }
               }
             }
@@ -104,7 +104,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'5.20.1'"
+                  "Value": "'6.1.0'"
                 }
               }
             },
@@ -260,43 +260,22 @@
           }
         },
         "type": "RelativeDate",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "n",
-              "Entity": "actual_vs_budget",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 0,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "n"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  },
-                  "Right": {
-                    "DateSpan": {
-                      "Expression": {
-                        "Now": {}
-                      },
-                      "TimeUnit": 3
-                    }
-                  }
-                }
+        "howCreated": "User"
+      },
+      {
+        "name": "31a6cbf470b3fdb09c33",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "actual_vs_budget"
               }
-            }
-          ]
-        }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "RelativeDate",
+        "howCreated": "User"
       }
     ]
   },

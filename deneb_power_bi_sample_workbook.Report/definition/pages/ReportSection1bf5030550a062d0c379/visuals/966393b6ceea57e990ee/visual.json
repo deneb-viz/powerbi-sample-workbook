@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "966393b6ceea57e990ee",
   "position": {
     "x": 2.3758782118222825,
@@ -78,7 +78,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.7.2.1'"
+                  "Value": "'1.8.0.0'"
                 }
               }
             }
@@ -119,7 +119,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'5.20.1'"
+                  "Value": "'6.1.0'"
                 }
               }
             },
@@ -260,145 +260,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "352b71493de97a5ca201",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "Filter1b604732d8b536194ba0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "actual_vs_budget"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "p",
-              "Entity": "actual_vs_budget",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "p"
-                          }
-                        },
-                        "Property": "Date"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-07-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-08-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-09-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-10-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-11-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2023-12-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-01-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-02-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-03-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-04-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-05-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-06-01T00:00:00'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "datetime'2024-07-01T00:00:00'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
   "isHidden": true
 }

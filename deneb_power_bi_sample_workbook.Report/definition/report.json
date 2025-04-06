@@ -140,10 +140,12 @@
   ],
   "settings": {
     "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarizedAndUnderlying",
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
     "useScaledTooltips": true,
+    "queryLimitOption": "None",
     "customMemoryLimit": "1048576",
     "customTimeoutLimit": "225"
   },

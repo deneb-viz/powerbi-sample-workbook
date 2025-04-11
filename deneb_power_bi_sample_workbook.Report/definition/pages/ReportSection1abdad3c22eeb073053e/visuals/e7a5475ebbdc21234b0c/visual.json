@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "e7a5475ebbdc21234b0c",
   "position": {
     "x": 13.577900552486188,
@@ -29,7 +29,7 @@
                     "url": "https://vega.github.io/vega/docs/schemes/"
                   },
                   {
-                    "value": " that are tied to the current report theme and will update at run-time. This allows you to keep your visual's color scheme in-sync with your report, if you so wish. The visuals below show examples of binding these themes to your specification - try editing these visualsand experiment with different color schemes."
+                    "value": " that are tied to the current report theme and will update at run-time. This allows you to keep your visual's color scheme in-sync with your report, if you so wish. The visuals below show examples of binding these themes to your specification - try editing these visuals and experiment with different color schemes."
                   }
                 ]
               }

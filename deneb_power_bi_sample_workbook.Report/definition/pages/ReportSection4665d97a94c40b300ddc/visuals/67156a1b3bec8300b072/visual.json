@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "67156a1b3bec8300b072",
   "position": {
-    "x": 60.494233937397041,
-    "y": 359.40691927512358,
+    "x": 112,
+    "y": 320,
     "z": 0,
     "height": 96.079077429983528,
     "width": 200.16474464579903,
@@ -61,6 +61,13 @@
                   }
                 }
               }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
             }
           }
         }
@@ -84,7 +91,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "8000D"
+                  "Value": "6700D"
                 }
               }
             }
@@ -99,7 +106,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "k",
+                    "Name": "_",
                     "Entity": "__KK_KPITarget",
                     "Type": 0
                   }
@@ -113,7 +120,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "k"
+                                "Source": "_"
                               }
                             },
                             "Property": "KPITarget"
@@ -121,7 +128,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "8000D"
+                            "Value": "6700D"
                           }
                         }
                       }

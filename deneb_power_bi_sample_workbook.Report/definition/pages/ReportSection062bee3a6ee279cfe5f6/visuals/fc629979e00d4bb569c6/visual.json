@@ -209,7 +209,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "476.33392613797906D"
+                  "Value": "476.0005940762115D"
                 }
               }
             },

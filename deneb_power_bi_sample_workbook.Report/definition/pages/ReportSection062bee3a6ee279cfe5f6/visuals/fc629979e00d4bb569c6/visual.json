@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "fc629979e00d4bb569c6",
   "position": {
     "x": 1449.5731138080287,
@@ -183,7 +183,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'5.20.1'"
+                  "Value": "'6.1.0'"
                 }
               }
             }
@@ -196,7 +196,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.7.2.1'"
+                  "Value": "'1.8.0.0'"
                 }
               }
             }

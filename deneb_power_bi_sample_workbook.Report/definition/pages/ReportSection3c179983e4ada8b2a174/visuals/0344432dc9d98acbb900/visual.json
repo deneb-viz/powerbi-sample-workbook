@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "0344432dc9d98acbb900",
   "position": {
     "x": 20.21405206219811,
     "y": 610.36312285992165,
     "z": 13500,
     "height": 282.99012693935123,
-    "width": 605.24682651622,
-    "tabOrder": 0
+    "width": 605.24682651622
   },
   "visual": {
     "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
@@ -140,7 +139,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"description\": \"Plot showing a 30 day rolling average with raw values in the background.\",\n\n  \"data\": {\n    \"name\": \"dataset\"\n  },\n  \"transform\": [\n    {\n      \"window\": [\n        {\n          \"field\": \"temp_max\",\n          \"op\": \"mean\",\n          \"as\": \"rolling_mean\"\n        }\n      ],\n      \"frame\": [-15, 15]\n    }\n  ],\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"date\",\n      \"type\": \"temporal\",\n      \"title\": \"Date\"\n    },\n    \"y\": {\n      \"type\": \"quantitative\",\n      \"axis\": {\n        \"title\": \"Max Temperature and Rolling Mean\"\n      }\n    }\n  },\n  \"layer\": [\n    {\n      \"mark\": {\n        \"type\": \"point\",\n        \"opacity\": 0.3\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"temp_max\",\n          \"title\": \"Max Temperature\"\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"color\": \"red\",\n        \"size\": 3\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"rolling_mean\",\n          \"title\": \"Rolling Mean of Max Temperature\"\n        }\n      }\n    }\n  ]\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"description\": \"Plot showing a 30 day rolling average with raw values in the background.\",\n\n  \"data\": {\n    \"name\": \"dataset\" // data source reference\n  },\n\n  // TRANSFORM SECTION\n  \"transform\": [\n    {\n      // WINDOW TRANSFORM (creates a rolling mean over time)\n      \"window\": [\n        {\n          \"field\": \"temp_max\", // numeric field to average\n          \"op\": \"mean\", // operation: calculate mean\n          \"as\": \"rolling_mean\" // new field name for the computed average\n        }\n      ],\n      \"frame\": [-15, 15] // 30-day window centered on each row (15 days before & after)\n    }\n  ],\n\n  // GLOBAL ENCODING (shared by all layers)\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"date\", // use date field for x-axis\n      \"type\": \"temporal\", // time-based axis\n      \"title\": \"Date\" // axis label\n    },\n    \"y\": {\n      \"type\": \"quantitative\", // numeric y-axis\n      \"axis\": {\n        \"title\": \"Max Temperature and Rolling Mean\" // shared y-axis title\n      }\n    }\n  },\n\n  // LAYERED VISUALIZATION\n  \"layer\": [\n    {\n      // LAYER 1: raw temperature values (background points)\n      \"mark\": {\n        \"type\": \"point\", // scatter points\n        \"opacity\": 0.3 // low opacity to appear subtle behind the line\n      },\n      \"encoding\": {\n        // LAYER-SPECIFIC ENCODING (supplementary)\n        \"y\": {\n          \"field\": \"temp_max\", // plot actual daily max temperature\n          \"title\": \"Max Temperature\" // legend/tooltip title for this mark\n        }\n      }\n    },\n    {\n      // LAYER 2: rolling mean (foreground line)\n      \"mark\": {\n        \"type\": \"line\", // continuous line mark\n        \"color\": \"red\", // line color (constant value, not data-driven)\n        \"size\": 3 // line thickness in pixels\n      },\n      \"encoding\": {\n        // LAYER-SPECIFIC ENCODING (supplementary)\n        \"y\": {\n          \"field\": \"rolling_mean\", // smoothed rolling mean values\n          \"title\": \"Rolling Mean of Max Temperature\" // tooltip/legend label\n        }\n      }\n    }\n  ]\n}'"
                 }
               }
             },

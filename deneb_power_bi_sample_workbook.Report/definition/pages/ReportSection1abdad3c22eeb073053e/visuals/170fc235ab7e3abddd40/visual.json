@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "170fc235ab7e3abddd40",
   "position": {
     "x": 1438.517298187809,
@@ -78,7 +78,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"mark\": \"rect\",\n  \"encoding\": {\n    \"y\": {\n      \"field\": \"Month Start\",\n      \"timeUnit\": \"month\",\n      \"type\": \"ordinal\"\n    },\n    \"x\": {\n      \"field\": \"Month Start\",\n      \"timeUnit\": \"year\",\n      \"axis\": {\n        \"tickCount\": {\n          \"interval\": \"year\",\n          \"step\": 10\n        }\n      }\n    },\n    \"color\": {\n      \"field\": \"Mean Temperature\",\n      \"type\": \"quantitative\",\n      \"scale\": {\n        \"scheme\": \"pbiColorDivergent\"\n      },\n      \"legend\": {\n        \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n      }\n    }\n  }\n}'"
+                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"}, // Connects to the bound Power BI dataset\n\n  \"mark\": \"rect\", // Uses rectangles to create a month-year heatmap grid\n\n  \"encoding\": {\n\n    // ───────────────────────────────\n    // Y-Axis Encoding (Month Categories)\n    // Extracts only the month from each date for use as a discrete ordinal axis.\n    // Each row in the grid represents a month (Jan–Dec).\n    // ───────────────────────────────\n    \"y\": {\n      \"field\": \"Month Start\",  // Date field used for both axes\n      \"timeUnit\": \"month\",     // Extracts month component (1–12)\n      \"type\": \"ordinal\"        // Treats months as categorical bins\n    },\n\n    // ───────────────────────────────\n    // X-Axis Encoding (Year)\n    // Extracts the year from the same date field.\n    // Axis ticks are spaced in 10-year intervals for readability.\n    // ───────────────────────────────\n    \"x\": {\n      \"field\": \"Month Start\",  // Same field as Y, binned differently\n      \"timeUnit\": \"year\",      // Extracts year for horizontal axis\n      \"axis\": {\n        \"tickCount\": {         // Configures temporal tick spacing\n          \"interval\": \"year\",  // Defines the time unit used for ticks\n          \"step\": 10           // Sets tick step to every 10 years\n        }\n      }\n    },\n\n    // ───────────────────────────────\n    // Color Encoding (Quantitative Divergent Scale)\n    // Encodes Mean Temperature as color using a **divergent** color scheme.\n    // Ideal for highlighting above/below-average deviations around a midpoint.\n    // “pbiColorDivergent” provides Power BI’s native diverging color gradient.\n    // The legend conditionally adds “°C” to the 20°C mark.\n    // ───────────────────────────────\n    \"color\": {\n      \"field\": \"Mean Temperature\",  // Continuous variable mapped to color\n      \"type\": \"quantitative\",       // Indicates a continuous numeric scale\n      \"scale\": {\n        \"scheme\": \"pbiColorDivergent\"  // Power BI’s diverging color palette\n      },\n      \"legend\": {\n        // Dynamically modifies legend label formatting\n        \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n        // Appends “°C” for clarity when the scale value equals 20\n      }\n    }\n  }\n}'"
                 }
               }
             },
@@ -143,7 +143,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "361.32948929159807D"
+                  "Value": "361.66282135336564D"
                 }
               }
             },

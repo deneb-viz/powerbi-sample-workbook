@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "fc629979e00d4bb569c6",
   "position": {
     "x": 1449.5731138080287,
     "y": 298.95272850717134,
     "z": 0,
     "height": 511.00059407621148,
-    "width": 450.16719001951964,
-    "tabOrder": 0
+    "width": 450.16719001951964
   },
   "visual": {
     "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
@@ -127,7 +126,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"description\": \"A scatterplot showing body mass and flipper lengths of penguins.\",\n  \"data\": {\"name\": \"dataset\"},\n  \"title\": {\"text\": \"Scatter plot with shape/colour legend\", \"fontSize\": 18},\n  \"mark\": \"point\",\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"Flipper Length (mm)\",\n      \"type\": \"quantitative\",\n      \"scale\": {\"zero\": false},\n      \"axis\": {\n        \"titleFontSize\": 14,\n        \"labelFontSize\": 14\n      }\n    },\n    \"y\": {\n      \"field\": \"Body Mass (g)\",\n      \"type\": \"quantitative\",\n      \"scale\": {\"zero\": false},\n      \"axis\": {\n        \"titleFontSize\": 14,\n        \"labelFontSize\": 14\n      }\n    },\n    \"color\": {\n      \"field\": \"Species\",\n      \"type\": \"nominal\",\n      \"legend\": {\n        \"titleFontSize\": 16,\n        \"labelFontSize\": 16\n      }\n    },\n    \"shape\": {\n      \"field\": \"Species\",\n      \"type\": \"nominal\"\n    }\n  }\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"description\": \"A scatterplot showing the relationship between penguin body mass and flipper length.\",\n\n  \"data\": {\"name\": \"dataset\"}, // dataset reference (assumes Penguin dataset)\n\n  \"title\": {\n    \"text\": \"Scatter plot with shape/colour legend\", // chart title text\n    \"fontSize\": 18 // title font size for better visibility\n  },\n\n  // MARK (defines basic geometric type)\n  \"mark\": \"point\", // scatter plot = individual data points\n\n  // GLOBAL ENCODING (defines data-to-visual mappings)\n  \"encoding\": {\n    // X CHANNEL (horizontal axis)\n    \"x\": {\n      \"field\": \"Flipper Length (mm)\", // quantitative variable on x-axis\n      \"type\": \"quantitative\", // continuous numeric data\n      \"scale\": {\"zero\": false}, // don''t force axis to start at zero (better data fit)\n      \"axis\": {\n        \"titleFontSize\": 14, // axis title size\n        \"labelFontSize\": 14  // tick label size\n      }\n    },\n\n    // Y CHANNEL (vertical axis)\n    \"y\": {\n      \"field\": \"Body Mass (g)\", // quantitative variable on y-axis\n      \"type\": \"quantitative\",\n      \"scale\": {\"zero\": false}, // allows chart to auto-fit data range\n      \"axis\": {\n        \"titleFontSize\": 14,\n        \"labelFontSize\": 14\n      }\n    },\n\n    // COLOR CHANNEL (categorical differentiation)\n    \"color\": {\n      \"field\": \"Species\", // species determines point color\n      \"type\": \"nominal\", // categorical (non-ordered)\n      \"legend\": {\n        \"titleFontSize\": 16, // legend title size\n        \"labelFontSize\": 16  // legend item label size\n      }\n    },\n\n    // SHAPE CHANNEL (supplementary category distinction)\n    \"shape\": {\n      \"field\": \"Species\", // same field as color for visual redundancy\n      \"type\": \"nominal\" // distinct shapes for each species\n    }\n  }\n}'"
                 }
               }
             },
@@ -209,7 +208,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "476.0005940762115D"
+                  "Value": "476.33392613797906D"
                 }
               }
             },

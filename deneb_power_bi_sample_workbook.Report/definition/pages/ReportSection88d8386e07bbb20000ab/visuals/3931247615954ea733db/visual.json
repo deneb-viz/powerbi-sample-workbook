@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "3931247615954ea733db",
   "position": {
     "x": 21.901140684410645,
     "y": 7.3003802281368815,
     "z": 0,
     "height": 119.72623574144487,
-    "width": 1883.4980988593154,
-    "tabOrder": 0
+    "width": 1883.4980988593154
   },
   "visual": {
     "visualType": "textbox",
@@ -43,7 +42,13 @@
                     "url": "https://vega.github.io/vega-lite/docs/facet.html"
                   },
                   {
-                    "value": " are expressions used to nest and combine multiple charts views. Whereas "
+                    "value": " ",
+                    "textStyle": {
+                      "color": "#e044a7"
+                    }
+                  },
+                  {
+                    "value": "are expressions used to nest and combine multiple charts views. Whereas "
                   },
                   {
                     "value": "concat",

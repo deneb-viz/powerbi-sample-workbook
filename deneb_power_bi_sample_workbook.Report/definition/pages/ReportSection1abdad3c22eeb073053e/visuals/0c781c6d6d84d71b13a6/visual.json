@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "0c781c6d6d84d71b13a6",
   "position": {
     "x": 532.28995057660632,
@@ -77,7 +77,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"mark\": {\n    \"type\": \"bar\",\n    \"tooltip\": true\n  },\n  \"encoding\": {\n    \"y\": {\n      \"field\": \"City\",\n      \"type\": \"nominal\",\n      \"sort\": \"-x\"\n    },\n    \"x\": {\n      \"field\": \"Mean Temperature\",\n      \"type\": \"quantitative\"\n    },\n    \"color\": {\n      \"field\": \"Mean Temperature\",\n      \"legend\": null,\n      \"scale\": {\n        \"scheme\": \"pbiColorOrdinal\"\n      }\n    },\n    \"opacity\": {\n      \"condition\": {\n        \"test\": {\n          \"field\": \"__selected__\",\n          \"equal\": \"off\"\n        },\n        \"value\": 0.3\n      },\n      \"value\": 1\n    }\n  }\n}'"
+                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"}, // Data reference — automatically linked to the Power BI visual’s dataset\n\n  \"mark\": {\n    \"type\": \"bar\",   // Draws horizontal bars for each City\n    \"tooltip\": true  // Enables tooltips showing the bound data fields on hover\n  },\n\n  \"encoding\": {\n    // ───────────────────────────────\n    // Y-Axis Encoding (Categorical)\n    // Each bar corresponds to one City.\n    // Sorted by descending Mean Temperature to emphasize warmer locations first.\n    // ───────────────────────────────\n    \"y\": {\n      \"field\": \"City\",     // The City name label\n      \"type\": \"nominal\",   // Nominal/categorical type for grouping\n      \"sort\": \"-x\"         // Sort descending by the quantitative field on x\n    },\n\n    // ───────────────────────────────\n    // X-Axis Encoding (Quantitative)\n    // Encodes Mean Temperature as bar length.\n    // This field defines the main metric visualized.\n    // ───────────────────────────────\n    \"x\": {\n      \"field\": \"Mean Temperature\", // Quantitative measure\n      \"type\": \"quantitative\"       // Continuous numeric scale\n    },\n\n    // ───────────────────────────────\n    // Color Encoding (Ordinal Gradient)\n    // Uses Mean Temperature as the fill color driver.\n    // The Power BI “pbiColorOrdinal” scheme applies a\n    // smooth ordinal gradient from cool to warm tones.\n    // This emphasizes relative magnitude differences.\n    // ───────────────────────────────\n    \"color\": {\n      \"field\": \"Mean Temperature\",  // Field used to compute fill color intensity\n      \"legend\": null,               // Hides legend for a cleaner layout\n      \"scale\": {\n        \"scheme\": \"pbiColorOrdinal\" // Built-in Power BI color gradient (ordinal mapping)\n      }\n    },\n\n    // ───────────────────────────────\n    // Opacity Encoding (Cross-filter Highlight)\n    // Responds to Power BI selection state.\n    // When \"__selected__\" is \"off\", bars dim (opacity = 0.3);\n    // otherwise, they remain fully opaque (opacity = 1).\n    // This ensures visual coherence during filtering or selection.\n    // ───────────────────────────────\n    \"opacity\": {\n      \"condition\": {\n        \"test\": {\n          \"field\": \"__selected__\",  // Power BI internal field for selection state\n          \"equal\": \"off\"            // Dim unselected elements\n        },\n        \"value\": 0.3                // Reduced opacity for de-emphasized items\n      },\n      \"value\": 1                    // Full opacity for selected or default state\n    }\n  }\n}'"
                 }
               }
             },
@@ -169,7 +169,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "361.32948929159807D"
+                  "Value": "361.66282135336564D"
                 }
               }
             },

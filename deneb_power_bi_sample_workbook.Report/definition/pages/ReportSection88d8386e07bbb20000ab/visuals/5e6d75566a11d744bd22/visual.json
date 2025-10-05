@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "5e6d75566a11d744bd22",
   "position": {
     "x": 644.31266846361189,
@@ -84,7 +84,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"facet\": {\"row\": {\"field\": \"Origin\"}},\n  \"spacing\": 20,\n  \"spec\": {\n    \"mark\": {\"type\": \"bar\"},\n    \"width\": 180,\n    \"height\": 95,\n    \"encoding\": {\n      \"x\": {\n        \"bin\": {\"maxbins\": 12},\n        \"field\": \"Horsepower\",\n        \"type\": \"quantitative\"\n      },\n      \"y\": {\n        \"title\": false,\n        \"aggregate\": \"count\",\n        \"type\": \"quantitative\"\n      }\n    }\n  }\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n\n  \"data\": {\"name\": \"dataset\"}, // (shared dataset across all facets)\n\n  // ──────────────────────────────\n  // FACET DEFINITION\n  // ──────────────────────────────\n  \"facet\": {\n    \"row\": {\n      \"field\": \"Origin\" // (create one row per unique Origin value)\n    }\n  },\n\n  \"spacing\": 20, // (vertical spacing between facet rows)\n\n  // ──────────────────────────────\n  // SPEC: base visualization template applied to each facet\n  // ──────────────────────────────\n  \"spec\": {\n    \"mark\": {\"type\": \"bar\"}, // (histogram bars for horsepower bins)\n    \"width\": 180,  // (facet chart width)\n    \"height\": 95,  // (facet chart height)\n\n    \"encoding\": {\n      // X-AXIS (numeric binning)\n      \"x\": {\n        \"bin\": {\"maxbins\": 12}, // (split Horsepower range into 12 bins)\n        \"field\": \"Horsepower\",\n        \"type\": \"quantitative\" // (continuous numeric data)\n      },\n\n      // Y-AXIS (counts within each bin)\n      \"y\": {\n        \"title\": false, // (hide redundant y-axis title across facets)\n        \"aggregate\": \"count\", // (tally number of cars per bin)\n        \"type\": \"quantitative\"\n      }\n    }\n  }\n}'"
                 }
               }
             },

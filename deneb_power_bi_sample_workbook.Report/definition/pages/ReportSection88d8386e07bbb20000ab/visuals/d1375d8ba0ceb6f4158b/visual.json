@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "d1375d8ba0ceb6f4158b",
   "position": {
     "x": 646.16749087807057,
@@ -84,7 +84,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"facet\": {\"column\": {\"field\": \"Origin\"}},\n  \"spacing\": 20,\n  \"spec\": {\n    \"mark\": {\"type\": \"bar\"},\n    \"width\": 165,\n    \"height\": 115,\n    \"encoding\": {\n      \"x\": {\n        \"bin\": {\"maxbins\": 12},\n        \"field\": \"Horsepower\",\n        \"type\": \"quantitative\",\n        \"axis\": {\n          \"title\": \"\"\n        }\n      },\n      \"y\": {\n        \"aggregate\": \"count\",\n        \"type\": \"quantitative\"\n      }\n    }\n  }\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n\n  \"data\": {\"name\": \"dataset\"}, // (shared dataset across all facet panels)\n\n  // ──────────────────────────────\n  // FACETING (top-level)\n  // ──────────────────────────────\n  \"facet\": {\n    \"column\": {              // (facet each column by unique Origin)\n      \"field\": \"Origin\"      // (categorical field defining facet grouping)\n    }\n  },\n\n  \"spacing\": 20,              // (horizontal gap between facet columns)\n\n  // ──────────────────────────────\n  // SPEC (inner chart reused per facet)\n  // ──────────────────────────────\n  \"spec\": {\n    \"mark\": {\"type\": \"bar\"},  // (histogram representation per facet)\n    \"width\": 165,             // (width of each individual chart)\n    \"height\": 115,            // (height of each individual chart)\n\n    // ENCODING (applies within each facet panel)\n    \"encoding\": {\n\n      // X-AXIS (binned horsepower values)\n      \"x\": {\n        \"bin\": {\"maxbins\": 12}, // (divide Horsepower into up to 12 bins)\n        \"field\": \"Horsepower\",  // (numerical field being binned)\n        \"type\": \"quantitative\", // (ensures continuous scale before binning)\n        \"axis\": {\n          \"title\": \"\"           // (suppress title for clean multi-panel layout)\n        }\n      },\n\n      // Y-AXIS (count of records per horsepower bin)\n      \"y\": {\n        \"aggregate\": \"count\",   // (histogram count of cars per bin)\n        \"type\": \"quantitative\"  // (numeric axis for frequencies)\n      }\n    }\n  }\n}'"
                 }
               }
             },

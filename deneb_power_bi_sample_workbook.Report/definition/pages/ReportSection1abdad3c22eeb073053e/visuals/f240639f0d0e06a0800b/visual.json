@@ -99,7 +99,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'6.1.0'"
+                  "Value": "'6.4.1'"
                 }
               }
             }
@@ -132,7 +132,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.8.1.0'"
+                  "Value": "'1.8.2.0'"
                 }
               }
             }
@@ -150,7 +150,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "361.66282135336564D"
+                  "Value": "361.32948929159807D"
                 }
               }
             },

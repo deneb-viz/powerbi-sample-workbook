@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "f240639f0d0e06a0800b",
   "position": {
     "x": 985.40362438220768,
@@ -78,7 +78,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"mark\": \"rect\",\n  \"encoding\": {\n    \"y\": {\n      \"field\": \"Month Start\",\n      \"timeUnit\": \"month\",\n      \"type\": \"ordinal\"\n    },\n    \"x\": {\n      \"field\": \"Month Start\",\n      \"timeUnit\": \"year\",\n      \"axis\": {\n        \"tickCount\": {\n          \"interval\": \"year\",\n          \"step\": 10\n        }\n      }\n    },\n    \"color\": {\n      \"field\": \"Mean Temperature\",\n      \"type\": \"quantitative\",\n      \"scale\": {\n        \"scheme\": \"pbiColorLinear\"\n      },\n      \"legend\": {\n        \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n      }\n    }\n  }\n}'"
+                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"}, // Data binding (Power BI dataset context)\n\n  \"mark\": \"rect\", // Each cell represents a Month-Year combination (heatmap style)\n\n  \"encoding\": {\n\n    // ───────────────────────────────\n    // Y-Axis Encoding (Month - Ordinal)\n    // Converts \"Month Start\" into a month-only categorical axis\n    // Creates vertical bands for months (Jan–Dec)\n    // ───────────────────────────────\n    \"y\": {\n      \"field\": \"Month Start\",  // Date field containing month start\n      \"timeUnit\": \"month\",     // Extracts month name from date\n      \"type\": \"ordinal\"        // Treats each month as a discrete category\n    },\n\n    // ───────────────────────────────\n    // X-Axis Encoding (Year - Temporal)\n    // Aggregates Month Start into yearly bins.\n    // Axis customized to show ticks every 10 years.\n    // This produces a time-based grid across decades.\n    // ───────────────────────────────\n    \"x\": {\n      \"field\": \"Month Start\",  // Same field, different temporal aggregation\n      \"timeUnit\": \"year\",      // Extracts year from date for X-axis grouping\n      \"axis\": {\n        \"tickCount\": {         // Custom tick interval definition\n          \"interval\": \"year\",  // Ticks spaced by time unit: year\n          \"step\": 10           // Step interval = 10 years (decadal ticks)\n        }\n      }\n    },\n\n    // ───────────────────────────────\n    // Color Encoding (Quantitative Gradient)\n    // Mean Temperature encoded via Power BI linear color gradient.\n    // The “pbiColorLinear” scheme creates smooth continuous transitions.\n    // Custom legend label expression appends “°C” to the 20°C breakpoint.\n    // ───────────────────────────────\n    \"color\": {\n      \"field\": \"Mean Temperature\",  // Continuous field driving color\n      \"type\": \"quantitative\",       // Numeric gradient across cells\n      \"scale\": {\n        \"scheme\": \"pbiColorLinear\"  // Power BI’s linear color gradient mapping\n      },\n      \"legend\": {\n        // Label formatting logic for color legend display\n        \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n        // Adds \"°C\" suffix conditionally when the label value equals 20\n      }\n    }\n  }\n}'"
                 }
               }
             },
@@ -150,7 +150,7 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "361.32948929159807D"
+                  "Value": "361.66282135336564D"
                 }
               }
             },

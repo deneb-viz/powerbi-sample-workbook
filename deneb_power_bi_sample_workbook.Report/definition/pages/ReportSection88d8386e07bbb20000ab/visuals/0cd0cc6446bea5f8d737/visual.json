@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "0cd0cc6446bea5f8d737",
   "position": {
     "x": 1288.2246931377103,
@@ -140,7 +140,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"transform\": [\n    {\n      \"filter\": {\n        \"field\": \"weather\",\n        \"oneOf\": [\"sun\", \"rain\"]\n      }\n    }\n  ],\n  \"spacing\": 40,\n  \"columns\": 3,\n  \"repeat\": [\n    \"temp_max\",\n    \"precipitation\",\n    \"wind\"\n  ],\n  \"spec\": {\n    \"width\": 115,\n    \"height\": 150,\n    \"mark\": \"line\",\n    \"encoding\": {\n      \"x\": {\n        \"field\": \"date\",\n        \"timeUnit\": \"month\",\n        \"axis\": {\n          \"title\": \"\"\n        }\n      },\n      \"y\": {\n        \"field\": {\"repeat\": \"repeat\"},\n        \"aggregate\": \"mean\"\n      },\n      \"color\": {\"field\": \"weather\"}\n    }\n  }\n}'"
+                  "Value": "'{\n  // define the data source (uses a named dataset)\n  \"data\": {\"name\": \"dataset\"},\n\n  // transformation to filter the data to only include certain weather types\n  \"transform\": [\n    {\n      \"filter\": {\n        \"field\": \"weather\",\n        \"oneOf\": [\"sun\", \"rain\"] // only include rows where weather is ''sun'' or ''rain''\n      }\n    }\n  ],\n\n  // spacing between repeated charts\n  \"spacing\": 40,\n\n  // number of columns in the repeated layout\n  \"columns\": 3,\n\n  // define which fields to repeat across charts (creates small multiples)\n  \"repeat\": [\n    \"temp_max\",\n    \"precipitation\",\n    \"wind\"\n  ],\n\n  // shared spec — defines what each repeated chart looks like\n  \"spec\": {\n    \"width\": 115,  // each small multiple width\n    \"height\": 150, // each small multiple height\n    \"mark\": \"line\", // line mark for temporal trend\n\n    // local encoding (applies to each repeated chart)\n    \"encoding\": {\n      \"x\": {\n        \"field\": \"date\",        // horizontal axis is date\n        \"timeUnit\": \"month\",    // grouped by month (temporal binning)\n        \"axis\": {\n          \"title\": \"\"           // hide x-axis title for compact layout\n        }\n      },\n      \"y\": {\n        \"field\": {\"repeat\": \"repeat\"}, // dynamically bind y-field to each repeated variable\n        \"aggregate\": \"mean\"            // average value per month\n      },\n      \"color\": {\n        \"field\": \"weather\"  // color line by weather condition\n      }\n    }\n  }\n}'"
                 }
               }
             },

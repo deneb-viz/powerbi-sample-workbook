@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "c88008d9aba30434490f",
   "position": {
     "x": 954.82479784366569,
@@ -84,7 +84,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"mark\": {\"type\": \"bar\"},\n  \"width\": 180,\n  \"height\": 85,\n  \"spacing\": 5,\n  \"encoding\": {\n    \"facet\": {\n      \"field\": \"Origin\",\n      \"type\": \"nominal\",\n      \"columns\": 1\n    },\n    \"x\": {\n      \"bin\": {\"maxbins\": 12},\n      \"field\": \"Horsepower\",\n      \"type\": \"quantitative\"\n    },\n    \"y\": {\n      \"title\": false,\n      \"aggregate\": \"count\",\n      \"type\": \"quantitative\"\n    }\n  }\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n\n  \"data\": {\"name\": \"dataset\"}, // (shared dataset used across all facets)\n\n  \"mark\": {\"type\": \"bar\"}, // (histogram bars per facet)\n  \"width\": 180,  // (width of each small multiple)\n  \"height\": 85,  // (height of each small multiple)\n  \"spacing\": 5,  // (padding between facet panels)\n\n  // ──────────────────────────────\n  // ENCODING (includes facet definition)\n  // ──────────────────────────────\n  \"encoding\": {\n\n    // FACET CHANNEL (controls subdivision of views)\n    \"facet\": {\n      \"field\": \"Origin\", // (one chart per unique Origin value)\n      \"type\": \"nominal\", // (categorical variable)\n      \"columns\": 1 // (arrange all facets in a single vertical column)\n    },\n\n    // X-AXIS (binned quantitative variable)\n    \"x\": {\n      \"bin\": {\"maxbins\": 12}, // (split Horsepower into 12 bins)\n      \"field\": \"Horsepower\",\n      \"type\": \"quantitative\" // (continuous numerical field)\n    },\n\n    // Y-AXIS (count of records per bin)\n    \"y\": {\n      \"title\": false, // (remove redundant y-title for cleaner layout)\n      \"aggregate\": \"count\", // (histogram count per bin)\n      \"type\": \"quantitative\"\n    }\n  }\n}'"
                 }
               }
             },

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "8f9e1b8e24a66efbd349",
   "position": {
     "x": 655.99565644295978,
@@ -140,14 +140,14 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"data\": {\"name\": \"dataset\"},\n  \"title\": \"Daily Max Temperatures (C) in Seattle, WA\",\n  \"config\": {\n    \"view\": {\n      \"strokeWidth\": 0,\n      \"step\": 13\n    },\n    \"axis\": {\"domain\": false}\n  },\n  \"mark\": {\n    \"type\": \"rect\",\n    \"tooltip\": true\n  },\n  \"encoding\": {\n    \"tooltip\": [\n      {\n        \"field\": \"temp_max\",\n        \"title\": \"Max Temp\",\n        \"aggregate\": \"max\"\n      }\n    ],\n    \"x\": {\n      \"field\": \"date\",\n      \"timeUnit\": \"date\",\n      \"type\": \"ordinal\",\n      \"title\": \"Day\",\n      \"axis\": {\n        \"labelAngle\": 0,\n        \"format\": \"%e\"\n      }\n    },\n    \"y\": {\n      \"field\": \"date\",\n      \"timeUnit\": \"month\",\n      \"type\": \"ordinal\",\n      \"title\": \"Month\"\n    },\n    \"color\": {\n      \"field\": \"temp_max\",\n      \"aggregate\": \"max\",\n      \"type\": \"quantitative\",\n      \"legend\": {\"title\": null}\n    }\n  }\n}'"
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v5.json\",\n  \"data\": {\"name\": \"dataset\"},\n  \"title\": \"Daily Max Temperatures (C) in Seattle, WA\", // chart title\n\n  // MARK (defines what shape to draw)\n  \"mark\": {\n    \"type\": \"rect\", // each data point is shown as a rectangle cell\n    \"tooltip\": true // enable tooltips on hover (auto uses encoded fields)\n  },\n\n  // GLOBAL ENCODING (applies to this single mark)\n  \"encoding\": {\n    // TOOLTIP CHANNEL (supplementary encoding)\n    // defines what appears in tooltip popups — overrides auto behaviour\n    \"tooltip\": [\n      {\n        \"field\": \"temp_max\", // numeric field from data\n        \"title\": \"Max Temp\", // label in tooltip\n        \"aggregate\": \"max\" // show the highest temperature per cell\n      }\n    ],\n\n    // X CHANNEL (horizontal position)\n    \"x\": {\n      \"field\": \"date\", // date field from dataset\n      \"timeUnit\": \"date\", // extracts the day of month (1–31)\n      \"type\": \"ordinal\", // treats days as discrete categories\n      \"title\": \"Day\", // axis label\n      \"axis\": {\n        \"labelAngle\": 0, // keep day labels horizontal\n        \"format\": \"%e\" // date format (e.g., 1, 2, 3 instead of 01)\n      }\n    },\n\n    // Y CHANNEL (vertical position)\n    \"y\": {\n      \"field\": \"date\", // same date field\n      \"timeUnit\": \"month\", // extracts the month (Jan–Dec)\n      \"type\": \"ordinal\", // treats months as discrete categories\n      \"title\": \"Month\" // axis label\n    },\n\n    // COLOR CHANNEL (visual encoding for value intensity)\n    \"color\": {\n      \"field\": \"temp_max\", // map color to maximum daily temperature\n      \"aggregate\": \"max\", // use highest temp for each day/month cell\n      \"type\": \"quantitative\", // numeric continuous scale\n      \"legend\": {\n        \"title\": null // hide legend title (keep color bar clean)\n      }\n    }\n  }\n}'"
                 }
               }
             },
             "jsonConfig": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"view\": {\"stroke\": \"transparent\"},\n  \"axis\": {\"grid\": false}\n}'"
+                  "Value": "'{\n  \"view\": {\n    \"strokeWidth\": 0, // remove outer border around chart\n    \"step\": 13 // controls cell size / spacing in discrete axes (useful for heatmaps)\n  },\n  \"axis\": {\n    \"domain\": false // removes axis line for a cleaner, grid-based look\n  }\n}'"
                 }
               }
             },

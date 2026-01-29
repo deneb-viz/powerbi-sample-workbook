@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "27f7f9ca851c804d5341",
   "position": {
     "x": 26.892448262183862,
@@ -94,13 +94,6 @@
                 }
               }
             },
-            "isNewDialogOpen": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "enableTooltips": {
               "expr": {
                 "Literal": {
@@ -152,7 +145,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.8.2.0'"
+                  "Value": "'1.9.0.0'"
                 }
               }
             }

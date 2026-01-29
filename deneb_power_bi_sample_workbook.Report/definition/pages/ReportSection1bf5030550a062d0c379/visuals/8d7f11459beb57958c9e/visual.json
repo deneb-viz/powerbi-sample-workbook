@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8d7f11459beb57958c9e",
   "position": {
     "x": 977.76466999277636,
@@ -63,7 +63,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.8.2.0'"
+                  "Value": "'1.9.0.0'"
                 }
               }
             }
@@ -91,13 +91,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'{\n  \"background\": \"transparent\",\n  \"view\": {\"stroke\": \"transparent\"},\n  \"font\": \"Segoe UI\",\n  \"arc\": {},\n  \"area\": {\n    \"line\": true,\n    \"opacity\": 0.6\n  },\n  \"bar\": {},\n  \"line\": {\n    \"stroke\": \"dimgrey\",\n    \"strokeWidth\": 3,\n    \"strokeCap\": \"round\",\n    \"strokeJoin\": \"round\"\n  },\n  \"path\": {},\n  \"point\": {\n    \"filled\": true,\n    \"size\": 150\n  },\n  \"rect\": {},\n  \"shape\": {},\n  \"symbol\": {\n    \"strokeWidth\": 1.5,\n    \"size\": 50\n  },\n  \"text\": {\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 12,\n    \"fill\": \"#605E5C\"\n  },\n  \"axis\": {\n    \"ticks\": false,\n    \"grid\": false,\n    \"domain\": false,\n    \"labelColor\": \"#605E5C\",\n    \"labelFontSize\": 12,\n    \"titleFont\": \"wf_standard-font, helvetica, arial, sans-serif\",\n    \"titleColor\": \"#252423\",\n    \"titleFontSize\": 16,\n    \"titleFontWeight\": \"normal\"\n  },\n  \"axisQuantitative\": {\n    \"tickCount\": 3,\n    \"grid\": true,\n    \"gridColor\": \"#C8C6C4\",\n    \"gridDash\": [1, 5],\n    \"labelFlush\": false\n  },\n  \"axisX\": {\"labelPadding\": 5},\n  \"axisY\": {\"labelPadding\": 10},\n  \"header\": {\n    \"titleFont\": \"wf_standard-font, helvetica, arial, sans-serif\",\n    \"titleFontSize\": 16,\n    \"titleColor\": \"#252423\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 13.333333333333332,\n    \"labelColor\": \"#605E5C\"\n  },\n  \"legend\": {\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontWeight\": \"bold\",\n    \"titleColor\": \"#605E5C\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 13.333333333333332,\n    \"labelColor\": \"#605E5C\",\n    \"symbolType\": \"circle\",\n    \"symbolSize\": 75\n  }\n}'"
-                }
-              }
-            },
-            "isNewDialogOpen": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             },

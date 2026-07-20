@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY23SU11",
@@ -68,58 +68,18 @@
       "type": "RegisteredResources",
       "items": [
         {
+          "name": "contributors_v59153850973914442.png",
+          "path": "contributors_v59153850973914442.png",
+          "type": "Image"
+        },
+        {
           "name": "Custom9978995164988356.json",
           "path": "Custom9978995164988356.json",
           "type": "CustomTheme"
         },
         {
-          "name": "DenebBackground30133184093552456.png",
-          "path": "DenebBackground30133184093552456.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v2277763047923157.png",
-          "path": "DenebBackground_v2277763047923157.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v28419077823742744.png",
-          "path": "DenebBackground_v28419077823742744.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v219057416983609476.png",
-          "path": "DenebBackground_v219057416983609476.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v29579580945120463.png",
-          "path": "DenebBackground_v29579580945120463.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v27503429448301522.png",
-          "path": "DenebBackground_v27503429448301522.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v22949068520846223.png",
-          "path": "DenebBackground_v22949068520846223.png",
-          "type": "Image"
-        },
-        {
-          "name": "DenebBackground_v21961900762261355.png",
-          "path": "DenebBackground_v21961900762261355.png",
-          "type": "Image"
-        },
-        {
-          "name": "deneb-background-mouse_v27568040550090342.png",
-          "path": "deneb-background-mouse_v27568040550090342.png",
-          "type": "Image"
-        },
-        {
-          "name": "deneb-background-mouse_v35823961918948053.png",
-          "path": "deneb-background-mouse_v35823961918948053.png",
+          "name": "dataset_background8481175941521644.png",
+          "path": "dataset_background8481175941521644.png",
           "type": "Image"
         },
         {
@@ -133,13 +93,53 @@
           "type": "Image"
         },
         {
-          "name": "dataset_background8481175941521644.png",
-          "path": "dataset_background8481175941521644.png",
+          "name": "deneb-background-mouse_v27568040550090342.png",
+          "path": "deneb-background-mouse_v27568040550090342.png",
           "type": "Image"
         },
         {
-          "name": "contributors_v59153850973914442.png",
-          "path": "contributors_v59153850973914442.png",
+          "name": "deneb-background-mouse_v35823961918948053.png",
+          "path": "deneb-background-mouse_v35823961918948053.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v219057416983609476.png",
+          "path": "DenebBackground_v219057416983609476.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v21961900762261355.png",
+          "path": "DenebBackground_v21961900762261355.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v2277763047923157.png",
+          "path": "DenebBackground_v2277763047923157.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v22949068520846223.png",
+          "path": "DenebBackground_v22949068520846223.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v27503429448301522.png",
+          "path": "DenebBackground_v27503429448301522.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v28419077823742744.png",
+          "path": "DenebBackground_v28419077823742744.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground_v29579580945120463.png",
+          "path": "DenebBackground_v29579580945120463.png",
+          "type": "Image"
+        },
+        {
+          "name": "DenebBackground30133184093552456.png",
+          "path": "DenebBackground30133184093552456.png",
           "type": "Image"
         }
       ]
@@ -151,6 +151,7 @@
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
     "useScaledTooltips": true,
+    "enableDeveloperMode": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",
     "customTimeoutLimit": "225"

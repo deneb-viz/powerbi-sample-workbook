@@ -151,7 +151,6 @@
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
     "useScaledTooltips": true,
-    "enableDeveloperMode": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",
     "customTimeoutLimit": "225"

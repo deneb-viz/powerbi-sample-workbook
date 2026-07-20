@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "7e95d2eaa221bcb00c17",
   "position": {
     "x": 666.82578268876614,
@@ -121,7 +121,7 @@
             "jsonSpec": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"Calendar Year\",\n      \"type\": \"quantitative\",\n      \"axis\": {\"format\": \"d\"}\n    }\n  },\n  \"height\": 400,\n  \"layer\": [\n    {\n      \"mark\": {\"type\": \"area\", \"line\": \"\"},\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Highest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\"title\": \"\"}\n        },\n        \"y2\": {\n          \"field\": \"Lowest Mean Temperature\"\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"stroke\": \"darkgrey\",\n        \"strokeWidth\": 0.8,\n        \"yOffset\": 0,\n        \"opacity\": 0.8\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Highest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"stroke\": \"darkgrey\",\n        \"strokeWidth\": 0.8,\n        \"yOffset\": 0,\n        \"opacity\": 0.8\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Lowest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"yOffset\": 0,\n        \"opacity\": 1\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"12 Month Average by Month (C)\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    }\n  ]\n}'"
+                  "Value": "'{\n  \"data\": {\"name\": \"dataset\"},\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"Calendar Year\",\n      \"type\": \"quantitative\",\n      \"axis\": {\"format\": \"d\", \"tickCount\": 5}\n    }\n  },\n  \"layer\": [\n    {\n      \"mark\": {\"type\": \"area\", \"line\": \"\"},\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Highest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\"title\": \"\"}\n        },\n        \"y2\": {\n          \"field\": \"Lowest Mean Temperature\"\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"stroke\": \"darkgrey\",\n        \"strokeWidth\": 0.8,\n        \"yOffset\": 0,\n        \"opacity\": 0.8\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Highest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"stroke\": \"darkgrey\",\n        \"strokeWidth\": 0.8,\n        \"yOffset\": 0,\n        \"opacity\": 0.8\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"Lowest Mean Temperature\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\",\n        \"yOffset\": 0,\n        \"opacity\": 1\n      },\n      \"encoding\": {\n        \"y\": {\n          \"field\": \"12 Month Average by Month (C)\",\n          \"type\": \"quantitative\",\n          \"axis\": {\n            \"labelExpr\": \"datum.label + (datum.value === 20 ? '' °C'' : '''')\"\n          }\n        }\n      }\n    }\n  ]\n}'"
                 }
               }
             },
@@ -135,14 +135,21 @@
             "enableContextMenu": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'6.4.1'"
+                  "Value": "'6.4.3'"
+                }
+              }
+            },
+            "enableContextMenuSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -155,7 +162,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.9.1.0'"
+                  "Value": "'2.0.0.0'"
                 }
               }
             }
@@ -173,14 +180,35 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "451.31307550644567D"
+                  "Value": "451D"
                 }
               }
             },
             "viewportWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "571.358379373849D"
+                  "Value": "571D"
+                }
+              }
+            },
+            "supportFieldConfiguration": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"Calendar Year\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"Lowest Mean Temperature\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false},\"Mean Temperature\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false},\"Highest Mean Temperature\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false},\"12 Month Average by Month (C)\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false}}'"
+                }
+              }
+            },
+            "denebMetaVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2'"
+                }
+              }
+            },
+            "consolidateFieldParameters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -1,0 +1,293 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "f79e461a0d8cacbb8ec8",
+  "position": {
+    "x": 1271.393819407881,
+    "y": 599.99999852840858,
+    "z": 5,
+    "height": 464,
+    "width": 528,
+    "tabOrder": 4005
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "penguins"
+                    }
+                  },
+                  "Property": "Index"
+                }
+              },
+              "queryRef": "penguins.Index",
+              "nativeQueryRef": "Index"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "penguins"
+                    }
+                  },
+                  "Property": "Species"
+                }
+              },
+              "queryRef": "penguins.Species",
+              "nativeQueryRef": "Series",
+              "displayName": "Series"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "penguins"
+                    }
+                  },
+                  "Property": "Mean Beak Length (mm)"
+                }
+              },
+              "queryRef": "penguins.Mean Beak Length (mm)",
+              "nativeQueryRef": "Mean Beak Length (mm)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "penguins"
+                    }
+                  },
+                  "Property": "Mean Beak Depth (mm)"
+                }
+              },
+              "queryRef": "penguins.Mean Beak Depth (mm)",
+              "nativeQueryRef": "Mean Beak Depth (mm)"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Penguin Variables (Legacy)"
+                    }
+                  },
+                  "Property": "Penguin Variables (Legacy)"
+                }
+              },
+              "index": 1,
+              "length": 1
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "penguins"
+                  }
+                },
+                "Property": "Index"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"data\": {\n    \"name\": \"dataset\"\n  },\n  \"transform\": [\n    {\n      \"filter\": \"datum[''Series''] != ''.'' && datum[''Series''] != null\"\n    }\n  ],\n  \"layer\": [\n    {\n      \"mark\": {\n        \"type\": \"point\",\n        \"filled\": true,\n        \"size\": 75\n      }\n    },\n    {\n      \"mark\": {\n        \"type\": \"line\"\n      },\n      \"transform\": [\n        {\n          \"regression\": \"Mean Beak Depth (mm)\",\n          \"on\": \"Mean Beak Length (mm)\",\n          \"groupby\": [\n            \"Series\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"Mean Beak Length (mm)\",\n      \"type\": \"quantitative\",\n      \"scale\": {\n        \"zero\": false\n      }\n    },\n    \"y\": {\n      \"field\": \"Mean Beak Depth (mm)\",\n      \"type\": \"quantitative\",\n      \"scale\": {\n        \"zero\": false\n      }\n    },\n    \"color\": {\n      \"field\": \"Series\",\n      \"legend\": {\n        \"orient\": \"top\",\n        \"title\": null\n      }\n    }\n  }\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectionMaxDataPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "selectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'simple'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.3'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "454D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "518D"
+                }
+              }
+            },
+            "supportFieldConfiguration": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"Index\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"Series\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"Mean Beak Length (mm)\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false},\"Mean Beak Depth (mm)\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false}}'"
+                }
+              }
+            },
+            "denebMetaVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2'"
+                }
+              }
+            },
+            "consolidateFieldParameters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2.0.0.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "29e5413fce92317d648e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "penguins"
+              }
+            },
+            "Property": "Index"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4f418625ea1b3b3aa98b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "penguins"
+              }
+            },
+            "Property": "Mean Beak Length (mm)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed5ade1360ba80b831ec",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "penguins"
+              }
+            },
+            "Property": "Mean Beak Depth (mm)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

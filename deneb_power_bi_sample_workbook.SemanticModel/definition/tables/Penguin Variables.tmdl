@@ -1,0 +1,49 @@
+table 'Penguin Variables'
+	lineageTag: b2dde58c-df85-46d5-adf4-73322531d042
+
+	column 'Penguin Variables'
+		lineageTag: 3bb200eb-b243-46e7-8419-a90c3f6c32fc
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Penguin Variables Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Penguin Variables Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Penguin Variables Fields'
+		isHidden
+		lineageTag: 0498537b-bec8-4a9b-bd13-a325b156f7de
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Penguin Variables Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Penguin Variables Order'
+		isHidden
+		formatString: 0
+		lineageTag: 0e4875f9-a9ea-4a85-8051-52a213bd1f96
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Penguin Variables' = calculated
+		mode: import
+		source =
+				{
+				    ("Species", NAMEOF('penguins'[Species]), 0),
+				    ("Sex", NAMEOF('penguins'[Sex]), 1),
+				    ("Island", NAMEOF('penguins'[Island]), 2)
+				}
+
+	annotation PBI_Id = bfe23c564bec48bfa6b3a2fa9d8258b1
+

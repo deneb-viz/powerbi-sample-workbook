@@ -1,6 +1,26 @@
 table penguins
 	lineageTag: 8c137aaf-3888-4caf-b1fc-7f26324738a0
 
+	measure 'Mean Beak Depth (mm)' = AVERAGE(penguins[Beak Depth (mm)])
+		lineageTag: 2001151c-958d-4b1c-9b0d-3321daae07aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mean Beak Length (mm)' = AVERAGE(penguins[Beak Length (mm)])
+		lineageTag: 98222c38-453d-4d64-89c4-a83d5ad72958
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mean Body Mass (g)' = AVERAGE(penguins[Body Mass (g)])
+		lineageTag: 0a5311cb-a977-4c68-b26d-e9d215d3978c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mean Flipper Length (mm)' = AVERAGE(penguins[Flipper Length (mm)])
+		lineageTag: 274c4505-1051-4900-88b4-4b3131901df7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Species
 		dataType: string
 		lineageTag: 5f128624-c8e0-4b13-8844-f17782cb0446

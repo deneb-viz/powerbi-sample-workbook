@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b1a02c13e697ba1c8c05",
   "position": {
     "x": 113.14917127071823,
@@ -169,16 +169,16 @@
                     "value": "In becoming familiar with Deneb alongside the Vega-Lite and Vega languages, you will learn to \"think visually\" and greatly expand your visual options within Power BI. You can find more detailed (and regularly updated) documentation hosted at "
                   },
                   {
-                    "value": "deneb-viz.github.io",
+                    "value": "deneb.guide",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "16pt",
                       "color": "#e23692"
                     },
-                    "url": "https://deneb-viz.github.io/"
+                    "url": "https://deneb.guide"
                   },
                   {
-                    "value": ",",
+                    "value": ".",
                     "textStyle": {
                       "fontSize": "16pt"
                     }

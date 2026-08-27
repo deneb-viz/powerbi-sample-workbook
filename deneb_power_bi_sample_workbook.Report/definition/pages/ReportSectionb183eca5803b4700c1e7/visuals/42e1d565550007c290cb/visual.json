@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "42e1d565550007c290cb",
   "position": {
     "x": 18.966565349544073,
@@ -52,7 +52,7 @@
                     "textStyle": {
                       "color": "#e23692"
                     },
-                    "url": "https://deneb-viz.github.io/visual-dataset-binding"
+                    "url": "https://deneb.guide/docs/dataset"
                   },
                   {
                     "value": "."

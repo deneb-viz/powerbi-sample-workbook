@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "825ba223dd90a888b26b",
   "position": {
     "x": 19.40700808625337,
@@ -67,7 +67,7 @@
                     "textStyle": {
                       "color": "#e23692"
                     },
-                    "url": "https://deneb-viz.github.io/visual-editor"
+                    "url": "https://deneb.guide/docs/visual-editor"
                   },
                   {
                     "value": "."
@@ -91,7 +91,7 @@
                     "textStyle": {
                       "color": "#e23692"
                     },
-                    "url": "https://deneb-viz.github.io/simple-worked-example"
+                    "url": "https://deneb.guide/docs/simple-example"
                   },
                   {
                     "value": ", and will also provide you with a short introduction on how to integrate some of the other functionality. "
@@ -151,7 +151,7 @@
                     "textStyle": {
                       "color": "#e23692"
                     },
-                    "url": "https://deneb-viz.github.io/interactivity-features-overview"
+                    "url": "https://deneb.guide/docs/interactivity-overview"
                   },
                   {
                     "value": "."

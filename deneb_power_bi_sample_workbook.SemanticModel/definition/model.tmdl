@@ -69,6 +69,8 @@ ref table basicnumberFormatting
 ref table _tempAverage
 ref table __dim_bookmark
 ref table __dim_stepstatus
+ref table 'Penguin Variables'
+ref table 'Penguin Variables (Legacy)'
 
 ref cultureInfo en-US
 

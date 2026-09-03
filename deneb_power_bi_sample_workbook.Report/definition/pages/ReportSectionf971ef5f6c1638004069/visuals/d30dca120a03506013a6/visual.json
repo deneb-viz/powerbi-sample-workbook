@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "d30dca120a03506013a6",
   "position": {
     "x": 29.234338747099766,
@@ -125,7 +125,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'6.4.1'"
+                  "Value": "'6.4.3'"
                 }
               }
             }
@@ -138,7 +138,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.9.1.0'"
+                  "Value": "'2.0.0.0'"
                 }
               }
             }
@@ -156,14 +156,35 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "768.1902552204176D"
+                  "Value": "768D"
                 }
               }
             },
             "viewportWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1856.8213457076565D"
+                  "Value": "1857D"
+                }
+              }
+            },
+            "supportFieldConfiguration": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"group\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"groupOrder\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"id\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"order\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"patternName\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false},\"svgUrl\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":true,\"formatted\":true,\"names\":false}}'"
+                }
+              }
+            },
+            "denebMetaVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2'"
+                }
+              }
+            },
+            "consolidateFieldParameters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

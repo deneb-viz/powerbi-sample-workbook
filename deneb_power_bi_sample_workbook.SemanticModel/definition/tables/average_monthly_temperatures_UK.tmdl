@@ -234,7 +234,7 @@ table average_monthly_temperatures_UK
 				in
 				    Custom1
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 
 	annotation PBI_NavigationStepName = Navigation
 

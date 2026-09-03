@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "0bb4ed128a6d56670c05",
   "position": {
     "x": 558.30662499668642,
@@ -200,7 +200,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'6.4.1'"
+                  "Value": "'6.4.3'"
                 }
               }
             }
@@ -213,7 +213,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.9.1.0'"
+                  "Value": "'2.0.0.0'"
                 }
               }
             }
@@ -226,14 +226,35 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "660.5604243947504D"
+                  "Value": "661D"
                 }
               }
             },
             "viewportWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "779.2613879996861D"
+                  "Value": "779D"
+                }
+              }
+            },
+            "supportFieldConfiguration": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"Topic\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"Diff\":{\"highlight\":true,\"highlightStatus\":true,\"highlightComparator\":true,\"format\":true,\"formatted\":true,\"names\":false},\"Estimated\":{\"highlight\":true,\"highlightStatus\":true,\"highlightComparator\":true,\"format\":true,\"formatted\":true,\"names\":false},\"Sign\":{\"highlight\":true,\"highlightStatus\":true,\"highlightComparator\":true,\"format\":true,\"formatted\":true,\"names\":false},\"True\":{\"highlight\":true,\"highlightStatus\":true,\"highlightComparator\":true,\"format\":true,\"formatted\":true,\"names\":false}}'"
+                }
+              }
+            },
+            "denebMetaVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2'"
+                }
+              }
+            },
+            "consolidateFieldParameters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

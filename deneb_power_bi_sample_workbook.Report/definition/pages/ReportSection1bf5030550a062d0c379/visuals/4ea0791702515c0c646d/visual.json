@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "4ea0791702515c0c646d",
   "position": {
     "x": 2.2131088259164926,
@@ -78,7 +78,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'1.9.1.0'"
+                  "Value": "'2.0.0.0'"
                 }
               }
             }
@@ -112,7 +112,7 @@
             "version": {
               "expr": {
                 "Literal": {
-                  "Value": "'6.4.1'"
+                  "Value": "'6.4.3'"
                 }
               }
             },
@@ -160,14 +160,35 @@
             "viewportHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "206.0045378860571D"
+                  "Value": "206D"
                 }
               }
             },
             "viewportWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "890.3408425292088D"
+                  "Value": "890D"
+                }
+              }
+            },
+            "supportFieldConfiguration": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"Date\":{\"highlight\":false,\"highlightStatus\":false,\"highlightComparator\":false,\"format\":false,\"formatted\":false,\"names\":false},\"AC\":{\"highlight\":true,\"highlightStatus\":true,\"highlightComparator\":true,\"format\":true,\"formatted\":true,\"names\":false}}'"
+                }
+              }
+            },
+            "denebMetaVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2'"
+                }
+              }
+            },
+            "consolidateFieldParameters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

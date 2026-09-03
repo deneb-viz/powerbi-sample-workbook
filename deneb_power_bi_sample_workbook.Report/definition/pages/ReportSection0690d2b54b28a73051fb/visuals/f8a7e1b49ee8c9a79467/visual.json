@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "f8a7e1b49ee8c9a79467",
   "position": {
     "x": 17.97598771172715,
@@ -22,7 +22,8 @@
                     "textStyle": {
                       "textDecoration": "underline",
                       "color": "#e044a7"
-                    }
+                    },
+                    "url": "https://vega.github.io/vega-lite/docs/layer.html"
                   },
                   {
                     "value": " ",

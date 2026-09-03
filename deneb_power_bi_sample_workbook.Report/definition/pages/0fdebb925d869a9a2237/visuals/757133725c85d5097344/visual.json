@@ -1,0 +1,131 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "757133725c85d5097344",
+  "position": {
+    "x": 8,
+    "y": 16,
+    "z": 0,
+    "height": 328,
+    "width": 1904.0000000000002,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Support from field parameters is available from version 2.0 onwards. You can handle field parameters in multiple ways, either:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. [Deneb-specific] consolidate field parameters and their values into array values that you can transform (which requires no further changes to your model and is more portable)"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. [Historical workaround] customize the field parameter definition within your model to keep the provided field name to Deneb consistent (which only works for specific scenarios)"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "There are examples of both implementations below, showing how you can work with them as needed. Option 1 is the recommended approach, but any visuals migrated from version 1 (or imported via a template authored with version 1) will default to option 2 in order to preserve functionality, in case a visual may use the historical/unsupported approach."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Deneb's website has extensive documentation",
+                    "textStyle": {
+                      "color": "#e045a8"
+                    },
+                    "url": "https://deneb.guide/docs/field-parameters"
+                  },
+                  {
+                    "value": " for how to work with field parameters and how to leverage transforms in Vega or Vega-Lite."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Field Parameters'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
